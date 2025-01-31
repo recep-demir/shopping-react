@@ -1,5 +1,10 @@
+import CategoryBar from "../components/CategoryBar";
+
 const Home = () => {
-  return <div>Home</div>;
+  return <div>
+    
+    <CategoryBar/>
+  </div>;
 };
 
 export default Home;
