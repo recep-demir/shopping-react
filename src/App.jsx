@@ -1,6 +1,6 @@
 import { Provider } from "react-redux";
-import Home from "./pages/Home";
 import { store } from "./app/store";
+import AppRouter from "./router/AppRouter";
 
 
 
@@ -10,7 +10,7 @@ function App() {
   return (
   <div>
     <Provider store ={store}>
-   <Home/>
+   <AppRouter/>
    </Provider>
 
   </div>
