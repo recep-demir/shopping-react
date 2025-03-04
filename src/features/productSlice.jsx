@@ -4,10 +4,16 @@ const initialState = {
 };
 
 const productSlice = createSlice({
-  name: 'product',
-  initialState,
+  name: 'productSlice',
+  initialState:{
+    products:[],
+    loading:false,
+    error:false
+  },
   reducers: {
-    clear: () => initialState,
+    fetchStart: (state) =>{
+        state.loading
+    }
   },
 });
 
