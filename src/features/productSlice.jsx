@@ -10,7 +10,6 @@ export const fetchData = createAsyncThunk(
         return res.data;
     }
 )
-
 export const fetchCategory = createAsyncThunk(
     "productSlice/fetchCategory", 
     async() =>{
@@ -19,8 +18,6 @@ export const fetchCategory = createAsyncThunk(
         return res.data;
     }
 )
-
-
 
 const productSlice = createSlice({
   name: 'productSlice',
