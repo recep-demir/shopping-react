@@ -1,8 +1,19 @@
+import { useDispatch } from 'react-redux';
 import CategoryBar from '../components/CategoryBar';
 import ProductCard from '../components/ProductCard';
 import { Container, Grid2, CircularProgress } from '@mui/material';
+import { useEffect } from 'react';
+import { fetchCategory, fetchData } from '../features/productSlice';
 
 const Home = () => {
+  const dispatch = useDispatch()
+
+
+  useEffect(() => {
+    dispatch(fetchData())
+    dispatch(fetchCategory()); // fetchData thunk'ını çağırın
+  }, [dispatch]);
+
   return (
     <div>
       <Container>
