@@ -2504,6 +2504,11 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
+toolkit@^1.5.4:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/toolkit/-/toolkit-1.5.4.tgz#cb878eb76516f087a0aa6ed37e1ab8e2563391ca"
+  integrity sha512-Pl5sFQlDCeQjJxpd/f0btO6khPKR9RioF4aLzbYtJGePI+CVKpVbOhcJd2F5cR4a2saD0qTzCTIWDvLOqeQ/jg==
+
 turbo-stream@2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/turbo-stream/-/turbo-stream-2.4.0.tgz#1e4fca6725e90fa14ac4adb782f2d3759a5695f0"
