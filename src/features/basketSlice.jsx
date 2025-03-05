@@ -1,15 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
-};
 
 const basketSlice = createSlice({
   name: 'basketSlice',
   initialState:{
-    items:[],
+    basketItems:[],
     total:0
   },
-  reducers: {},
+  reducers: {
+    addToBasket :(state, {payload})=>{
+        
+    }
+
+
+
+  },
   
 });
 
