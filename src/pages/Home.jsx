@@ -7,7 +7,7 @@ import { fetchCategory, fetchData } from '../features/productSlice';
 
 const Home = () => {
   const dispatch = useDispatch()
-  const {products, loading}= useSelector((state)=>state.productSlice)
+  const {products, loading} =useSelector((state)=>state.productSlice)
 
 
   useEffect(() => {
@@ -16,27 +16,22 @@ const Home = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      
-      <Container>
-      <CategoryBar />
-      {loading ? (<Grid2 container justifyContent="center" alignItems={'center'} mt={15}>
-        </Grid2>): (
-          <Grid2 container justifyContent="center" spacing={4} mt={10}>
-            {products.map(()=>{
-              
-            })}
-          
-          <Grid2 item key="">
-            <ProductCard product="" text="Add" />
+    <Container>
+    {!loading ? (
+      <Grid2 container justifyContent="center" spacing={4} mt={10}>
+        <CategoryBar />
+        {products.map((product) => (
+          <Grid2 item key={product.id}>
+            <ProductCard text="Add" />
           </Grid2>
-        </Grid2>)}
-
-        
-      </Container>
-      ;
-    </div>
-  );
+        ))}
+      </Grid2>
+    ) : (
+      <Grid2 container justifyContent="center" alignItems={'center'} mt={15}>
+        <CircularProgress />
+      </Grid2>
+    )}
+  </Container>
+);
 };
-
 export default Home;
