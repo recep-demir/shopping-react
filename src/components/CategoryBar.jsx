@@ -19,11 +19,11 @@ const CategoryBar = () => {
         onChange=""
       >
         <FormControlLabel value="" control={<Radio />} label="All" />
-        {categories.map((category)=>(
+        {categories.map((category,index)=>(
           <FormControlLabel
-          key=""
+          key={index}
           sx={{ textTransform: 'capitalize' }}
-          value=""
+          value={category}
           control={<Radio />}
           label={category}
         />

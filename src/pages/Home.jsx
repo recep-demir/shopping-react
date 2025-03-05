@@ -22,7 +22,7 @@ const Home = () => {
         <CategoryBar />
         {products.map((product) => (
           <Grid2 item key={product.id}>
-            <ProductCard text="Add" />
+            <ProductCard product={product} text="Add" />
           </Grid2>
         ))}
       </Grid2>
