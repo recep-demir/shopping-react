@@ -8,11 +8,10 @@ import {
   Typography,
 } from '@mui/material';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import { useSelector } from 'react-redux';
+
 
 
 const ProductCard = ({product}) => {
-  const {products} =useSelector((state)=>state.productSlice)
   return (
     <Card sx={{ width: 350 }}>
     <CardMedia
