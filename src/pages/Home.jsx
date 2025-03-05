@@ -11,7 +11,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(fetchData())
-    dispatch(fetchCategory()); // fetchData thunk'ını çağırın
+    dispatch(fetchCategory());
   }, [dispatch]);
 
   return (
@@ -28,7 +28,7 @@ const Home = () => {
         </Grid2>
         {/* loading varsa */}
         <Grid2 container justifyContent="center" alignItems={'center'} mt={15}>
-          <CircularProgress />
+          {/* <CircularProgress /> */}
         </Grid2>
       </Container>
       ;
