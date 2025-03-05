@@ -10,7 +10,6 @@ import {
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 
-
 const ProductCard = ({product}) => {
   return (
     <Card sx={{ width: 350 }}>
