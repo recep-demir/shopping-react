@@ -6,6 +6,7 @@ import {
 } from '@mui/material';
 import { useSelector } from 'react-redux';
 
+
 const CategoryBar = () => {
   const {categories} =useSelector((state)=>state.productSlice)
   return (
