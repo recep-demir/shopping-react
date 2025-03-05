@@ -4,10 +4,13 @@ import {
   Radio,
   RadioGroup,
 } from '@mui/material';
+import { useSelector } from 'react-redux';
 
 const CategoryBar = () => {
+  const {categories} =useSelector((state)=>state.productSlice)
   return (
-    <FormControl sx={{ width: '100vw', m: 1 }}>
+    <FormControl sx={{ width: '100vw', mt:-3
+     }}>
       <RadioGroup
         row
         sx={{ justifyContent: 'center' }}
@@ -16,15 +19,15 @@ const CategoryBar = () => {
         onChange=""
       >
         <FormControlLabel value="" control={<Radio />} label="All" />
-        {/* categoriler map edilecek */}
-        <FormControlLabel
+        {categories.map((category)=>(
+          <FormControlLabel
           key=""
           sx={{ textTransform: 'capitalize' }}
           value=""
           control={<Radio />}
-          label=""
+          label={category}
         />
-        {/* prop ile geçilecek */}
+        ))}
       </RadioGroup>
     </FormControl>
   );
