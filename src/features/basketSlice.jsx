@@ -5,11 +5,17 @@ const basketSlice = createSlice({
   name: 'basketSlice',
   initialState:{
     basketItems:[],
-    total:0
+    count:0
   },
   reducers: {
     addToBasket :(state, {payload})=>{
-        
+        const existItem = 
+        state.basket = payload;
+        state.count = payload.length;
+
+    },
+    removeFromBasket :(state,(payload))=>{
+
     }
 
 
