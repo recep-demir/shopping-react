@@ -28,7 +28,7 @@ const ProductCard = () => {
           {products.title}
         </Typography>
         <Typography variant="h6" pl={1} color="initial">
-          {products.price + '€'}
+          {products.price + '$'}
         </Typography>
       </Box>
     </CardContent>
