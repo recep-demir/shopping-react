@@ -21,7 +21,6 @@ const ProductCard = ({product}) => {
     dispatch(addToBasket(product))
     toastSuccess("The Product added to Basket")
 
-
   }
 
   return (
