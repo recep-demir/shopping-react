@@ -9,10 +9,12 @@ import {
 } from '@mui/material';
 import React from 'react'
 import { addToBasket, removeFromBasket } from '../features/basketSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 const BasketCard = ({item}) => {
  const dispatch =useDispatch()
+ const { basketItems } = useSelector((state) => state.basketSlice);
+
 
  const handelUptade = (id,change) =>{
   if (change==="increase"){
@@ -20,9 +22,7 @@ const BasketCard = ({item}) => {
   }
   else if (change === 'decrease' && item.quantity > 1){
     dispatch(removeFromBasket(id))
-
   }
-  
  }
 
  const handleRemove =(id)=>{
