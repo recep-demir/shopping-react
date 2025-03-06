@@ -6,7 +6,7 @@ import { ToastContainer } from "react-toastify";
 function App() {
   return (
     <div>
-      <Provider store={store}>
+      <Provider store ={store}>
         <AppRouter />
         <ToastContainer />
       </Provider>
