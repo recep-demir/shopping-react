@@ -20,6 +20,7 @@
     "react-dom": "^19.0.0",
     "react-redux": "^9.2.0",
     "react-router": "^7.1.4",
+    "react-toastify": "^11.0.5",
     "redux": "^5.0.1",
     "toastify": "^2.0.1",
     "toolkit": "^1.5.4"
