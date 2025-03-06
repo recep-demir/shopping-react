@@ -5,7 +5,7 @@ const basketSlice = createSlice({
   name: 'basketSlice',
   initialState:{
     basketItems:[],
-    count:0
+    totalQuantity:0
   },
   reducers: {
     addToBasket: (state, { payload }) => {
