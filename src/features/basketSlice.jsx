@@ -27,6 +27,7 @@ const basketSlice = createSlice({
       removeItemCompletly:(state,{payload}) =>{
         state.basketItems = state.basketItems.filter(i=>i.id !==payload)
         state.totalQuantity = state.basketItems.reduce((sum, item) => sum + item.quantity, 0);
+        
 
       },
   

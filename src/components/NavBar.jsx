@@ -7,8 +7,11 @@ import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import StoreIcon from '@mui/icons-material/Store';
 import { Link } from 'react-router';
+import { Badge } from '@mui/material';
+import { useSelector } from 'react-redux';
 
 export default function ButtonAppBar() {
+  const {totalQuantity} = useSelector((state)=>state.basketSlice)
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{backgroundColor:"white", color:"black"}}>
@@ -30,7 +33,7 @@ export default function ButtonAppBar() {
 
           <Link to="basket" style={{ color: 'inherit', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
 
-          
+
           <IconButton
             size="large"
             edge="start"
@@ -38,7 +41,10 @@ export default function ButtonAppBar() {
             aria-label="menu"
             sx={{ mr: 3 }}
           >
-            <ShoppingCartIcon fontSize="large" />
+            <Badge badgeContent={totalQuantity} color="primary">
+              <ShoppingCartIcon fontSize="large" />
+              </Badge>
+            
           </IconButton>
           </Link>
 
