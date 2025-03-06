@@ -1,10 +1,14 @@
 import { Box, Typography } from '@mui/material'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import BasketCard from '../components/BasketCard'
 
 const Basket = () => {
   const {basketItems} =useSelector((state)=>state.basketSlice)
+
+
+
+
   return (
     <Box>
       <Typography textAlign="center" p={2} m={2} variant='h3'>
