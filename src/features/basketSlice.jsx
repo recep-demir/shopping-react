@@ -29,3 +29,4 @@ const basketSlice = createSlice({
   });
   
   export const { addToBasket, removeFromBasket, clearBasket } = basketSlice.actions;
+  export default basketSlice.reducer;

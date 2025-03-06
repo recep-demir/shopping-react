@@ -8,9 +8,20 @@ import {
   Typography,
 } from '@mui/material';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { useDispatch } from 'react-redux';
+import { addToBasket } from '../features/basketSlice';
 
 
 const ProductCard = ({product}) => {
+  const dispatch = useDispatch
+
+
+  const handleAdd = () =>{
+    dispatch(addToBasket(product))
+    
+
+  }
+
   return (
     <Card sx={{ width: 350 }}>
     <CardMedia
@@ -42,7 +53,7 @@ const ProductCard = ({product}) => {
       <IconButton
         aria-label="Add to Cart"
         color="primary"
-        // onClick={handleAdd}
+        onClick={handleAdd}
       >
         <AddShoppingCartIcon />
       </IconButton>
