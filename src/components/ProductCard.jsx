@@ -10,15 +10,17 @@ import {
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { useDispatch } from 'react-redux';
 import { addToBasket } from '../features/basketSlice';
+import { toastSuccess } from '../helper/ToastNotify';
 
 
 const ProductCard = ({product}) => {
-  const dispatch = useDispatch
+  const dispatch = useDispatch()
 
 
   const handleAdd = () =>{
     dispatch(addToBasket(product))
-    
+    toastSuccess("The Product added to Basket")
+
 
   }
 
