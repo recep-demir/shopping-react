@@ -4,11 +4,13 @@ import {
   Radio,
   RadioGroup,
 } from '@mui/material';
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 
 const CategoryBar = () => {
   const {categories} =useSelector((state)=>state.productSlice)
+  const [selectedCat, setSelectedCat] = useState("")
   return (
     <FormControl sx={{ width: '100vw', mt:-3
      }}>
@@ -16,8 +18,8 @@ const CategoryBar = () => {
         row
         sx={{ justifyContent: 'center' }}
         name="controlled-radio-buttons-group"
-        value=""
-        onChange=""
+        value={selectedCat}
+        onChange= {()=>setSelectedCat(e.target.value)}
       >
         <FormControlLabel value="" control={<Radio />} label="All" />
         {categories.map((category,index)=>(
