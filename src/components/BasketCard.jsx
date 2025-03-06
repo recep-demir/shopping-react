@@ -8,25 +8,27 @@ import {
   Typography,
 } from '@mui/material';
 import React from 'react'
-import { addToBasket, removeFromBasket } from '../features/basketSlice';
-import { useDispatch, useSelector } from 'react-redux';
+import { addToBasket, removeFromBasket, removeItemCompletly } from '../features/basketSlice';
+import { useDispatch } from 'react-redux';
 
 const BasketCard = ({item}) => {
  const dispatch =useDispatch()
- const { basketItems } = useSelector((state) => state.basketSlice);
 
 
- const handelUptade = (id,change) =>{
-  if (change==="increase"){
-    dispatch(addToBasket(item))
+const handleUpdate = (id, change) => {
+  if (change === "increase") {
+    dispatch(addToBasket(item));
+  } else if (change === "decrease") {
+    if (item.quantity === 1) {
+      dispatch(removeItemCompletly(id));
+    } else {
+      dispatch(removeFromBasket(id));
+    }
   }
-  else if (change === 'decrease' && item.quantity > 1){
-    dispatch(removeFromBasket(id))
-  }
- }
+};
 
  const handleRemove =(id)=>{
-  dispatch(removeFromBasket(id))
+  dispatch(removeItemCompletly(id))
  }
 
   return (
@@ -58,7 +60,7 @@ const BasketCard = ({item}) => {
           <Button
             type="button"
             size="small"
-            onClick={()=>handelUptade(item.id,'decrease')}
+            onClick={()=>handleUpdate(item.id,'decrease')}
                       
           >
             -
@@ -67,7 +69,7 @@ const BasketCard = ({item}) => {
           <Button
             type="button"
             size="small"
-            onClick={()=>handelUptade(item.id,"increase")}
+            onClick={()=>handleUpdate(item.id,"increase")}
           >
             +
           </Button>

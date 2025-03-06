@@ -15,14 +15,19 @@ const basketSlice = createSlice({
         
       },
   
-    removeFromBasket: (state, { payload }) => {
+      removeFromBasket: (state, { payload }) => {
         const item = state.basketItems.find(i => i.id === payload);
         if (!item) return;
-        item.quantity > 1 ? item.quantity-- : state.basketItems = state.basketItems.filter(i => i.id !== payload);
+      
+        if (item.quantity > 1) {
+          item.quantity--;
+        } 
         state.totalQuantity--;
       },
-      removeitemCompletly:(state,{payload}) =>{
+      removeItemCompletly:(state,{payload}) =>{
         state.basketItems = state.basketItems.filter(i=>i.id !==payload)
+        state.totalQuantity = state.basketItems.reduce((sum, item) => sum + item.quantity, 0);
+
       },
   
       clearBasket: (state) => {
@@ -32,5 +37,5 @@ const basketSlice = createSlice({
     },
   });
   
-  export const { addToBasket, removeFromBasket, clearBasket,removeitemCompletly } = basketSlice.actions;
+  export const { addToBasket, removeFromBasket, clearBasket,removeItemCompletly } = basketSlice.actions;
   export default basketSlice.reducer;
