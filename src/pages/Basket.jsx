@@ -4,17 +4,17 @@ import { useSelector } from 'react-redux'
 import BasketCard from '../components/BasketCard'
 
 const Basket = () => {
-  const {basket} =useSelector((state)=>state.basketSlice)
+  const {basketItems} =useSelector((state)=>state.basketSlice)
   return (
     <Box>
       <Typography textAlign="center" p={2} m={2} variant='h3'>
         My Basket
       </Typography>
       <Box sx={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
-        {basket.length>0 ? (
-          basket.map((item)=>(
+        {basketItems.length>0 ? (
+          basketItems.map((item)=>(
             <Box key={item.id} sx ={{position:"relative"}}>
-              <BasketCard {...item}/>
+              <BasketCard item={item}/>
             </Box>
           ))
 
