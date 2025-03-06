@@ -1,11 +1,11 @@
  //https://fkhadra.github.io/react-toastify/introduction
 
-  //https://fkhadra.github.io/react-toastify/introduction
 import {toast} from "react-toastify"
 
 
 export const toastSuccess=(msg)=>{
     toast.success(msg, {
+  position: "top-center",
   autoClose: 3000,
   hideProgressBar: false,
   closeOnClick: true,
