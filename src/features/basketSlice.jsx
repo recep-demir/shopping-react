@@ -13,7 +13,6 @@ const basketSlice = createSlice({
         item ? item.quantity++ : state.basketItems.push({ ...payload, quantity: 1 });
         state.totalQuantity++;
         
-
       },
   
     removeFromBasket: (state, { payload }) => {

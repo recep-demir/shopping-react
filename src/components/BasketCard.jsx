@@ -8,8 +8,26 @@ import {
   Typography,
 } from '@mui/material';
 import React from 'react'
+import { addToBasket, removeFromBasket } from '../features/basketSlice';
+import { useDispatch } from 'react-redux';
 
 const BasketCard = ({item}) => {
+ const dispatch =useDispatch()
+
+ const handelUptade = (id,change) =>{
+  if (change==="increase"){
+    dispatch(addToBasket(item))
+  }
+  else if (change === 'decrease' && item.quantity > 1){
+    dispatch(removeFromBasket(id))
+
+  }
+  
+ }
+
+ const handleRemove =(id)=>{
+  dispatch(removeFromBasket(id))
+ }
 
   return (
     <Card sx={{ width: 350 , gap:"3"}}>
@@ -40,8 +58,8 @@ const BasketCard = ({item}) => {
           <Button
             type="button"
             size="small"
-            
-            
+            onClick={()=>handelUptade(item.id,'decrease')}
+                      
           >
             -
           </Button>
@@ -49,6 +67,7 @@ const BasketCard = ({item}) => {
           <Button
             type="button"
             size="small"
+            onClick={()=>handelUptade(item.id,"increase")}
           >
             +
           </Button>
@@ -57,6 +76,7 @@ const BasketCard = ({item}) => {
           variant="contained"
           type="button"
           color="error"
+          onClick={()=>handleRemove(item.id)}
         >
           Remove
         </Button>
