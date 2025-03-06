@@ -12,7 +12,7 @@ import React from 'react'
 const BasketCard = ({item}) => {
 
   return (
-    <Card sx={{ width: 350 }}>
+    <Card sx={{ width: 350 , gap:"3"}}>
       <CardMedia
       component="img"
       height={300}
@@ -40,6 +40,7 @@ const BasketCard = ({item}) => {
           <Button
             type="button"
             size="small"
+            
             
           >
             -

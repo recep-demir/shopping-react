@@ -2,6 +2,7 @@ import { Box, Typography } from '@mui/material'
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import BasketCard from '../components/BasketCard'
+import FilledBasketTotal from '../components/FilledBasketTotal'
 
 const Basket = () => {
   const {basketItems} =useSelector((state)=>state.basketSlice)
@@ -14,13 +15,14 @@ const Basket = () => {
       <Typography textAlign="center" p={2} m={2} variant='h3'>
         My Basket
       </Typography>
-      <Box sx={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
+      <Box sx={{display:"flex", flexWrap:"wrap", justifyContent:"center", gap:3}}>
         {basketItems.length>0 ? (
           basketItems.map((item)=>(
             <Box key={item.id} sx ={{position:"relative"}}>
               <BasketCard item={item}/>
             </Box>
           ))
+          
 
         ):(
           <Typography
@@ -33,7 +35,11 @@ const Basket = () => {
 
 
 
+
+
       </Box>
+
+      <FilledBasketTotal/>
       
 
     </Box>

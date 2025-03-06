@@ -1,5 +1,17 @@
-const FilledBasketTotal = () => {
-  return <div>FilledBasketTotal</div>;
-};
+import { Box, Button, Typography } from '@mui/material'
+import React from 'react'
 
-export default FilledBasketTotal;
+const FilledBasketTotal = () => {
+  return (
+    <Box display="flex" justifyContent="space-between" m={5} mx={15}>
+      <Typography variant='h5'>
+        Subtotal : $
+
+      </Typography>
+      <Button variant="contained" color='error'>Empty Basket</Button>
+
+    </Box>
+  )
+}
+
+export default FilledBasketTotal

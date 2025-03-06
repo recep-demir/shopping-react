@@ -1,4 +1,3 @@
- //https://fkhadra.github.io/react-toastify/introduction
 
 import {toast} from "react-toastify"
 
@@ -6,10 +5,10 @@ import {toast} from "react-toastify"
 export const toastSuccess=(msg)=>{
     toast.success(msg, {
   position: "top-center",
-  autoClose: 3000,
+  autoClose: 2000,
   hideProgressBar: false,
   closeOnClick: true,
-  pauseOnHover: true,
+  pauseOnHover: false,
   draggable: true,
   progress: undefined,
 });} 
