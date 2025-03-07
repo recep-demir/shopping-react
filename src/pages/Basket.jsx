@@ -8,8 +8,6 @@ const Basket = () => {
   const {basketItems} =useSelector((state)=>state.basketSlice)
 
 
-
-
   return (
     <Box>
       <Typography textAlign="center" p={2} m={2} variant='h3'>
