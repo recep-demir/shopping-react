@@ -1,5 +1,5 @@
 # Shopping React App
-## [Live Demo](https://milestone-blog-app.netlify.app/)
+## [Live Demo](https://shopping-react0.netlify.app/)
 ![App Screenshot](/public/image%20copy.png)
 ## Description
 
