@@ -6,9 +6,8 @@ import {
 } from '@mui/material';
 import { useSelector } from 'react-redux';
 
-
 const CategoryBar = ({selectedCat,setSelectedCat}) => {
-  const {categories} =useSelector((state)=>state.productSlice)
+const {categories} =useSelector((state)=>state.productSlice)
   
   return (
     <FormControl sx={{ width: '100vw', mt:-3
