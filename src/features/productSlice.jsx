@@ -18,14 +18,12 @@ export const fetchCategory = createAsyncThunk(
         return res.data;
     }
 )
-
 const productSlice = createSlice({
   name: 'productSlice',
   initialState:{
     products:[],
     categories:[],
     loading:false,
-    
   },
   reducers: {},
 
