@@ -1,6 +1,6 @@
 # Shopping React App
 ## [Live Demo](https://shopping-react0.netlify.app/)
-![App Screenshot](/public/image%20copy.png)
+![App Screenshot](/public/Shopping-.gif)
 ## Description
 
 This is an shopping application built with React, Redux, and Material-UI. The app allows users to browse products, filter them by categories, add them to the cart, and manage the cart items.
