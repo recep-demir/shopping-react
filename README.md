@@ -35,12 +35,11 @@ This is an shopping application built with React, Redux, and Material-UI. The ap
 4. Start the application:
 ```npm start```
 -  The project will run on http://localhost:5173!
-## Project Skeleton
+
 ## Authors
+[@recep-demir](https://github.com/recep-demir)
 
-- [@recep-demir](https://github.com/recep-demir)
-
-
+## Project Skeleton
 ```
 
 ├── public
