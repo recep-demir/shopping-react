@@ -8,7 +8,7 @@ function App() {
     <div>
       <Provider store ={store}>
         <AppRouter />
-        <ToastContainer />
+        <ToastContainer/>
       </Provider>
     </div>
   );
