@@ -13,10 +13,10 @@ const Basket = () => {
       <Typography textAlign="center" p={2} m={2} variant="h3">
         My Basket
       </Typography>
-      {basketItems.length > 0 ? ( // basketItems.length > 0 kontrolü
+      {basketItems.length > 0 ? (
         <Box>
           <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 3 }}>
-            {basketItems.map((item) => ( // map fonksiyonunu {} ile sarmalayın
+            {basketItems.map((item) => (
               <Box key={item.id} sx={{ position: 'relative' }}>
                 <BasketCard item={item} />
               </Box>
